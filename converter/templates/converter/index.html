@@ -12,22 +12,35 @@
 <div id="container">
     <h1>SRT <-> SMI 자막 변환</h1>
     <form method="post" enctype="multipart/form-data" novalidate>
-        {% csrf_token %}
-        <input type="file" name="upload_file">
-        <br><br>
-        <select name="convert_type">
-            <option value="0">변환하지 않음</option>
-            <option value="1">SMI -> SRT</option>
-            <option value="2">SRT -> SMI</option>
-        </select>
-        <br><br>
-        <select name="charset_type">
-            <option value="0">변환하지 않음</option>
-            <option value="1">EUC-KR -> UTF-8</option>
-            <option value="2">UTF-8 -> EUC-KR</option>
-        </select>
-        <br><br>
-        <button type="submit">Upload</button>
+    {% csrf_token %}
+        <ol>
+            <li>
+                <input type="file" name="upload_file">
+            </li>
+            <li>
+                <select name="convert_type">
+                    <option value="0">변환하지 않음</option>
+                    <option value="1">SMI -> SRT</option>
+                    <option value="2">SRT -> SMI</option>
+                </select>
+            </li>
+            <li>
+                <select name="charset_type">
+                    <option value="0">변환하지 않음</option>
+                    <option value="1">EUC-KR -> UTF-8</option>
+                    <option value="2">UTF-8 -> EUC-KR</option>
+                </select>
+            </li>
+            <li>
+                싱크 변환
+                <input size="6" type="number" name="sync_ms" min="0" max="10000" required>
+                ms
+                <span class="validity"></span>
+            </li>
+            <li>
+                <button type="submit">Upload</button>
+            </li>
+        </ol>
     </form>
 </div>
 </body>
