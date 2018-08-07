@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subtitle Converter</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<div id="container">
+    <h1>SRT <-> SMI 자막 변환</h1>
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <input type="file" name="upload_file">
+        <br><br>
+        <select name="convert_type">
+            <option value="0">변환하지 않음</option>
+            <option value="1">SMI -> SRT</option>
+            <option value="2">SRT -> SMI</option>
+        </select>
+        <br><br>
+        <select name="charset_type">
+            <option value="0">변환하지 않음</option>
+            <option value="1">EUC-KR -> UTF-8</option>
+            <option value="2">UTF-8 -> EUC-KR</option>
+        </select>
+        <br><br>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+</body>
+</html>

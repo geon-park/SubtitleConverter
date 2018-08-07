@@ -1,0 +1,14 @@
+body { text-align:center; }
+h1 { margin-bottom:0; }
+h1 a { /*text-decoration:none; color:#000;*/ }
+h3 { text-align:center }
+form { margin:20px 0; padding:0; }
+ol { margin:0; padding:0 0 0 20px; }
+li { margin-bottom:10px; }
+.ad { padding:20px 0 10px 0; }
+
+#container { margin:0 auto 0 auto; width:95%; max-width:980px !important; text-align:left; }
+#container { width:480px !important;}
+#sns { text-align:center; margin-bottom:20px; }
+#footer { text-align:center; margin-bottom:20px; }
+#content { width:100%; max-width:480px; float:left; }
